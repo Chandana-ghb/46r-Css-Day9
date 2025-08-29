@@ -1,0 +1,74 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /* border: 2px solid black; */
+    height: 729px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    /* border: 2px solid black; */
+    height: 650px;
+    width: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.child{
+    width: 87px;
+    height: 81px;
+    /* border:2px solid black; */
+    transition: all 0.5s ease;
+}
+
+.child:hover{
+    transform: scale(1.05);
+}
+
+.child-1:nth-child(odd){
+    background-color:#E7CCAC;
+}
+
+.child-1:nth-child(even){
+    background-color:#9C581D;
+}
+
+.child-2:nth-child(even){
+    background-color:#E7CCAC;
+}
+
+.child-2:nth-child(odd){
+    background-color:#9C581D;
+}
+
+.black{
+    /* border: 2px solid red; */
+    margin: 6px 10px;
+}
+
+.ghost{
+    display: none;
+}
+
+.com1:hover>img,.com2:hover>img,.com3:hover>img,.com4:hover>img,.com5:hover>img,.com6:hover>img,.com7:hover>img,.com8:hover>img{
+    display: none;
+}
+
+.com1:hover ~ .target1>.ghost , .com2:hover ~ .target2>.ghost, .com3:hover ~ .target3>.ghost, .com4:hover ~ .target4>.ghost, .com5:hover ~ .target5>.ghost, .com6:hover ~ .target6>.ghost, .com7:hover ~ .target7>.ghost, .com8:hover ~ .target8>.ghost{
+    display: block;
+}
+
+.rook:hover>img, .knight:hover>img , .bishop:hover>img,.king:hover>img,.queen:hover>img,.bishop1:hover>img,.rook1:hover>img,.knight1:hover>img{
+    display: none;
+}
+
+.rook:hover ~ .rook-target>.ghost, .knight:hover ~ .knight-target>.ghost,.bishop:hover ~ .bishop-target>.ghost,.king:hover ~ .king-target>.ghost,.queen:hover ~ .queen-target>.ghost,.bishop1:hover ~ .bishop1-target>.ghost,.rook1:hover ~ .rook1-target>.ghost,.knight1:hover ~ .knight1-target>.ghost{
+    display: block;
+}
